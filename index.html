@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Amal Sosial - Rangga Wijaya</title>
+    <meta name="description" content="Portofolio kegiatan amal sosial oleh Rangga Wijaya, seorang relawan yang berdedikasi untuk memberikan dampak positif bagi masyarakat.">
+    <meta name="keywords" content="relawan, amal sosial, portofolio, kegiatan sosial, pengembangan masyarakat">
+    <meta name="author" content="Rangga Wijaya">
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        /* Simple smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Active nav link style */
+        .nav-active {
+            color: #16a34a; /* social-green */
+            font-weight: 600;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'social-green': '#16a34a',
+                        'neutral-light': '#f8fafc',
+                        'neutral-medium': '#e2e8f0',
+                        'neutral-dark': '#334155',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans leading-relaxed">
+
+    <!-- ===== Header Start ===== -->
+    <header x-data="{ mobileMenuOpen: false }" class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-social-green">Rangga Wijaya</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#tentang" class="hover:text-social-green transition duration-300">Tentang Saya</a>
+                <a href="#kegiatan" class="hover:text-social-green transition duration-300">Kegiatan</a>
+                <a href="#dampak" class="hover:text-social-green transition duration-300">Dampak</a>
+                <a href="#keahlian" class="hover:text-social-green transition duration-300">Keahlian</a>
+                <a href="#testimoni" class="hover:text-social-green transition duration-300">Testimoni</a>
+                <a href="#kontak" class="bg-social-green text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Hubungi Saya</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false" class="md:hidden bg-white py-4">
+            <a href="#tentang" class="block px-6 py-2 hover:bg-neutral-medium">Tentang Saya</a>
+            <a href="#kegiatan" class="block px-6 py-2 hover:bg-neutral-medium">Kegiatan</a>
+            <a href="#dampak" class="block px-6 py-2 hover:bg-neutral-medium">Dampak</a>
+            <a href="#keahlian" class="block px-6 py-2 hover:bg-neutral-medium">Keahlian</a>
+            <a href="#testimoni" class="block px-6 py-2 hover:bg-neutral-medium">Testimoni</a>
+            <a href="#kontak" class="block px-6 py-2 bg-social-green text-white text-center mt-2 mx-4 rounded-md">Hubungi Saya</a>
+        </div>
+    </header>
+    <!-- ===== Header End ===== -->
+
+    <main>
+        <!-- ===== Hero Section Start ===== -->
+        <section id="home" class="bg-white pt-24 pb-16">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-neutral-dark mb-4">Membangun Harapan, Menebar Kebaikan</h1>
+                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">Sebuah rekam jejak perjalanan dalam aksi sosial, dedikasi untuk pemberdayaan masyarakat, dan komitmen untuk menciptakan perubahan positif.</p>
+                <div class="space-x-4">
+                    <a href="#kegiatan" class="bg-social-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300">Lihat Kegiatan</a>
+                    <a href="#kontak" class="bg-neutral-medium text-neutral-dark px-6 py-3 rounded-lg font-semibold hover:bg-slate-300 transition duration-300">Hubungi Saya</a>
+                </div>
+            </div>
+        </section>
+        <!-- ===== Hero Section End ===== -->
+
+        <!-- ===== Tentang Saya Section Start ===== -->
+        <section id="tentang" class="py-20">
+            <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-1 flex justify-center">
+                    <img src="https://via.placeholder.com/250" alt="Foto Profil Rangga Wijaya" class="rounded-full shadow-lg w-48 h-48 md:w-64 md:h-64 object-cover">
+                </div>
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl font-bold text-neutral-dark mb-4">Tentang Saya</h2>
+                    <p class="text-slate-600 mb-4">
+                        Saya adalah seorang mahasiswa dan relawan yang memiliki hasrat besar dalam bidang kemanusiaan dan pengembangan masyarakat. Bagi saya, setiap tindakan kecil yang dilandasi kepedulian dapat membawa perubahan besar. Melalui portofolio ini, saya ingin berbagi cerita dan dampak dari setiap kegiatan yang telah saya ikuti dan organisir.
+                    </p>
+                    <p class="text-slate-600">
+                        Nilai-nilai yang saya pegang teguh adalah integritas, empati, dan kolaborasi. Saya percaya bahwa dengan bekerja bersama, kita dapat menciptakan solusi yang berkelanjutan untuk tantangan sosial di sekitar kita.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- ===== Tentang Saya Section End ===== -->
+
+        <!-- ===== Kegiatan Amal Section Start ===== -->
+        <section id="kegiatan" class="bg-white py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-neutral-dark mb-12">Kegiatan Amal & Sosial</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-neutral-light rounded-lg shadow-md p-6 transform hover:-translate-y-2 transition duration-300">
+                        <h3 class="font-bold text-xl mb-2">Bantuan Pendidikan Anak Jalanan</h3>
+                        <p class="text-sm text-slate-500 mb-2"><strong>Waktu:</strong> Setiap Sabtu, 2024 | <strong>Lokasi:</strong> Jakarta Pusat</p>
+                        <p class="text-sm text-slate-500 mb-4"><strong>Peran:</strong> Koordinator Pengajar</p>
+                        <p class="text-slate-600">Mengorganisir sesi belajar kreatif untuk anak-anak jalanan, fokus pada literasi dasar dan pengembangan karakter.</p>
+                        <p class="mt-4 font-semibold text-social-green">Dampak: 50+ anak mendapatkan akses belajar rutin.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-neutral-light rounded-lg shadow-md p-6 transform hover:-translate-y-2 transition duration-300">
+                        <h3 class="font-bold text-xl mb-2">Program Makanan Bergizi untuk Lansia</h3>
+                        <p class="text-sm text-slate-500 mb-2"><strong>Waktu:</strong> Juni 2024 | <strong>Lokasi:</strong> Bandung</p>
+                        <p class="text-sm text-slate-500 mb-4"><strong>Peran:</strong> Relawan Distribusi</p>
+                        <p class="text-slate-600">Membantu distribusi 200+ paket makanan bergizi kepada para lansia di beberapa panti werdha dan komunitas.</p>
+                        <p class="mt-4 font-semibold text-social-green">Dampak: Meningkatkan asupan gizi lansia prasejahtera.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-neutral-light rounded-lg shadow-md p-6 transform hover:-translate-y-2 transition duration-300">
+                        <h3 class="font-bold text-xl mb-2">Aksi Bersih Sungai Ciliwung</h3>
+                        <p class="text-sm text-slate-500 mb-2"><strong>Waktu:</strong> April 2024 | <strong>Lokasi:</strong> Depok</p>
+                        <p class="text-sm text-slate-500 mb-4"><strong>Peran:</strong> Peserta & Dokumentasi</p>
+                        <p class="text-slate-600">Bergabung dengan 100+ relawan lain untuk membersihkan sampah di bantaran sungai dan mengedukasi warga sekitar.</p>
+                        <p class="mt-4 font-semibold text-social-green">Dampak: 1 ton sampah terangkat & meningkatnya kesadaran warga.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== Kegiatan Amal Section End ===== -->
+
+        <!-- ===== Dampak & Dokumentasi Section Start ===== -->
+        <section id="dampak" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-neutral-dark mb-12">Dampak & Dokumentasi</h2>
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-12">
+                    <div>
+                        <p class="text-4xl font-extrabold text-social-green">20+</p>
+                        <p class="text-slate-600">Kegiatan Terlaksana</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-extrabold text-social-green">500+</p>
+                        <p class="text-slate-600">Penerima Manfaat</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-extrabold text-social-green">150+</p>
+                        <p class="text-slate-600">Relawan Terlibat</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-extrabold text-social-green">3</p>
+                        <p class="text-slate-600">Penghargaan Komunitas</p>
+                    </div>
+                </div>
+                <!-- Gallery -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <img src="https://via.placeholder.com/400x300/16a34a/ffffff?text=Kegiatan+1" alt="Dokumentasi Kegiatan 1" class="rounded-lg shadow-md w-full h-full object-cover">
+                    <img src="https://via.placeholder.com/400x300/334155/ffffff?text=Kegiatan+2" alt="Dokumentasi Kegiatan 2" class="rounded-lg shadow-md w-full h-full object-cover">
+                    <img src="https://via.placeholder.com/400x300/e2e8f0/334155?text=Kegiatan+3" alt="Dokumentasi Kegiatan 3" class="rounded-lg shadow-md w-full h-full object-cover">
+                    <img src="https://via.placeholder.com/400x300/f8fafc/334155?text=Kegiatan+4" alt="Dokumentasi Kegiatan 4" class="rounded-lg shadow-md w-full h-full object-cover col-span-2 md:col-span-1">
+                    <img src="https://via.placeholder.com/400x300/16a34a/ffffff?text=Kegiatan+5" alt="Dokumentasi Kegiatan 5" class="rounded-lg shadow-md w-full h-full object-cover">
+                    <img src="https://via.placeholder.com/400x300/334155/ffffff?text=Kegiatan+6" alt="Dokumentasi Kegiatan 6" class="rounded-lg shadow-md w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+        <!-- ===== Dampak & Dokumentasi Section End ===== -->
+
+        <!-- ===== Keahlian & Nilai Sosial Section Start ===== -->
+        <section id="keahlian" class="bg-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-neutral-dark mb-12">Keahlian & Nilai Sosial</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Kepemimpinan</h3>
+                        <p class="text-slate-600">Mampu mengkoordinir tim, mendelegasikan tugas, dan memotivasi relawan untuk mencapai tujuan bersama.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Komunikasi & Empati</h3>
+                        <p class="text-slate-600">Dapat berkomunikasi secara efektif dengan berbagai pihak dan memahami kebutuhan penerima manfaat.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Manajemen Proyek</h3>
+                        <p class="text-slate-600">Berpengalaman dalam merencanakan, melaksanakan, dan mengevaluasi program sosial dari awal hingga akhir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== Keahlian & Nilai Sosial Section End ===== -->
+        
+        <!-- ===== Testimoni Section Start ===== -->
+        <section id="testimoni" class="py-20">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
+                <h2 class="text-3xl font-bold text-neutral-dark mb-8">Testimoni</h2>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <p class="text-slate-600 italic text-lg mb-4">"Kontribusi dan semangat Rangga dalam setiap kegiatan sangat luar biasa. Ia tidak hanya bekerja keras, tetapi juga mampu menginspirasi relawan lain untuk berbuat lebih. Kehadirannya membawa energi positif dan dampak nyata bagi komunitas kami."</p>
+                    <p class="font-bold text-neutral-dark">Budi Santoso</p>
+                    <p class="text-sm text-slate-500">Ketua Yayasan Harapan Bangsa</p>
+                </div>
+            </div>
+        </section>
+        <!-- ===== Testimoni Section End ===== -->
+
+        <!-- ===== Kontak Section Start ===== -->
+        <section id="kontak" class="bg-white py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-neutral-dark mb-12">Hubungi Saya</h2>
+                <div class="max-w-xl mx-auto">
+                    <p class="text-center text-slate-600 mb-8">
+                        Saya sangat terbuka untuk diskusi, kolaborasi, atau sekadar berbagi ide. Jangan ragu untuk menghubungi saya melalui formulir di bawah ini atau melalui kontak yang tersedia.
+                    </p>
+                    <!-- Dummy Form -->
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name" class="sr-only">Nama</label>
+                            <input type="text" name="name" id="name" placeholder="Nama Anda" class="w-full p-3 rounded-md border border-neutral-medium focus:ring-2 focus:ring-social-green focus:border-transparent transition">
+                        </div>
+                        <div>
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Email Anda" class="w-full p-3 rounded-md border border-neutral-medium focus:ring-2 focus:ring-social-green focus:border-transparent transition">
+                        </div>
+                        <div>
+                            <label for="message" class="sr-only">Pesan</label>
+                            <textarea name="message" id="message" rows="4" placeholder="Pesan Anda" class="w-full p-3 rounded-md border border-neutral-medium focus:ring-2 focus:ring-social-green focus:border-transparent transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-social-green text-white font-bold py-3 rounded-md hover:bg-opacity-90 transition">Kirim Pesan</button>
+                    </form>
+                    
+                    <div class="text-center mt-12">
+                        <p class="text-lg font-semibold">Informasi Kontak Langsung:</p>
+                        <p class="text-slate-600">Email: <a href="mailto:kontak@domain.com" class="text-social-green">kontak@domain.com</a></p>
+                        <p class="text-slate-600">WhatsApp: <a href="https://wa.me/6281234567890" class="text-social-green">+62 812-3456-7890</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== Kontak Section End ===== -->
+
+    </main>
+
+    <!-- ===== Footer Start ===== -->
+    <footer class="bg-neutral-dark text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Rangga Wijaya. Dibuat dengan semangat kepedulian sosial.</p>
+        </div>
+    </footer>
+    <!-- ===== Footer End ===== -->
+
+</body>
+</html>
